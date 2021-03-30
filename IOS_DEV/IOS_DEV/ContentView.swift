@@ -6,18 +6,45 @@
 //
 
 import SwiftUI
+import AuthenticationServices
 
 struct ContentView: View {
-    var message:String = ""
     var body: some View {
-        Text(message)
+        VStack{
+            Spacer()
+            SocialLoginButton(text: "Sign in with Google", textColor: .white, button: .black,image: "google"){
+                print("test")
+            }
+            
+            SocialLoginButton(text: "Sign in with Facebook", textColor: .white, button: .black,image: "twitter"){
+                print("test")
+            }
+            
+            
+            SignInWithAppleButton(
+                onRequest: { request in
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
+                },
+                onCompletion: { result in
+                    /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Code@*/ /*@END_MENU_TOKEN@*/
+                }
+            )
+            .cornerRadius(25)
+            .frame(height:50)
+            .padding(.horizontal,50)
+        }
+
     }
 }
  
  
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        
+        ZStack{
+            Color.gray.edgesIgnoringSafeArea(.all)
+            ContentView()
+        }
             
     }
 }

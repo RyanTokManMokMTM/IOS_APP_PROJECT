@@ -12,6 +12,9 @@
 		7A0EE934261041690056BC8C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A0EE933261041690056BC8C /* ContentView.swift */; };
 		7A0EE9362610416A0056BC8C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0EE9352610416A0056BC8C /* Assets.xcassets */; };
 		7A0EE9392610416A0056BC8C /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7A0EE9382610416A0056BC8C /* Preview Assets.xcassets */; };
+		7A31487C2610942100B6E5FB /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7A31487B2610942100B6E5FB /* GoogleService-Info.plist */; };
+		7A6CE7EA2610E7EA00DB962B /* SocialLoginButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A6CE7E92610E7EA00DB962B /* SocialLoginButton.swift */; };
+		7A74EECD2611A8A000B722CF /* HomePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7A74EECC2611A8A000B722CF /* HomePage.swift */; };
 		7ADA5A51261042E9000A84D9 /* SignUpInfoDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADA5A4E261042E9000A84D9 /* SignUpInfoDetail.swift */; };
 		7ADA5A52261042E9000A84D9 /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADA5A4F261042E9000A84D9 /* SignUp.swift */; };
 		7ADA5A53261042E9000A84D9 /* SignIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADA5A50261042E9000A84D9 /* SignIn.swift */; };
@@ -31,7 +34,6 @@
 		7ADA5A8526104396000A84D9 /* Topic1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADA5A8126104396000A84D9 /* Topic1.swift */; };
 		7ADA5A8626104396000A84D9 /* Cards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADA5A8226104396000A84D9 /* Cards.swift */; };
 		7ADA5A8726104396000A84D9 /* Topic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ADA5A8326104396000A84D9 /* Topic.swift */; };
-		7ADA5A932610479C000A84D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 7ADA5A922610479C000A84D9 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +44,10 @@
 		7A0EE9352610416A0056BC8C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7A0EE9382610416A0056BC8C /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		7A0EE93A2610416A0056BC8C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7A31487B2610942100B6E5FB /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		7A314880261095C300B6E5FB /* IOS_DEVDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = IOS_DEVDebug.entitlements; sourceTree = "<group>"; };
+		7A6CE7E92610E7EA00DB962B /* SocialLoginButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocialLoginButton.swift; sourceTree = "<group>"; };
+		7A74EECC2611A8A000B722CF /* HomePage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomePage.swift; sourceTree = "<group>"; };
 		7ADA5A4E261042E9000A84D9 /* SignUpInfoDetail.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpInfoDetail.swift; sourceTree = "<group>"; };
 		7ADA5A4F261042E9000A84D9 /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		7ADA5A50261042E9000A84D9 /* SignIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignIn.swift; sourceTree = "<group>"; };
@@ -61,7 +67,6 @@
 		7ADA5A8126104396000A84D9 /* Topic1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic1.swift; sourceTree = "<group>"; };
 		7ADA5A8226104396000A84D9 /* Cards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cards.swift; sourceTree = "<group>"; };
 		7ADA5A8326104396000A84D9 /* Topic.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Topic.swift; sourceTree = "<group>"; };
-		7ADA5A922610479C000A84D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		CDB175EFBBBB9D13FAFA7E4B /* Pods-IOS_DEV.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS_DEV.release.xcconfig"; path = "Target Support Files/Pods-IOS_DEV/Pods-IOS_DEV.release.xcconfig"; sourceTree = "<group>"; };
 		EE1BEC631F9FAE0A768A3AB9 /* Pods-IOS_DEV.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IOS_DEV.debug.xcconfig"; path = "Target Support Files/Pods-IOS_DEV/Pods-IOS_DEV.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -108,6 +113,7 @@
 		7A0EE930261041690056BC8C /* IOS_DEV */ = {
 			isa = PBXGroup;
 			children = (
+				7A314880261095C300B6E5FB /* IOS_DEVDebug.entitlements */,
 				7ADA5A7F26104396000A84D9 /* MainPage */,
 				7ADA5A6B26104355000A84D9 /* Components */,
 				7ADA5A4D261042E9000A84D9 /* UserPage */,
@@ -119,6 +125,7 @@
 				7A0EE9352610416A0056BC8C /* Assets.xcassets */,
 				7A0EE93A2610416A0056BC8C /* Info.plist */,
 				7A0EE9372610416A0056BC8C /* Preview Content */,
+				7A74EECC2611A8A000B722CF /* HomePage.swift */,
 			);
 			path = IOS_DEV;
 			sourceTree = "<group>";
@@ -134,7 +141,7 @@
 		7ADA5A4D261042E9000A84D9 /* UserPage */ = {
 			isa = PBXGroup;
 			children = (
-				7ADA5A922610479C000A84D9 /* GoogleService-Info.plist */,
+				7A31487B2610942100B6E5FB /* GoogleService-Info.plist */,
 				7ADA5A4E261042E9000A84D9 /* SignUpInfoDetail.swift */,
 				7ADA5A4F261042E9000A84D9 /* SignUp.swift */,
 				7ADA5A50261042E9000A84D9 /* SignIn.swift */,
@@ -154,6 +161,7 @@
 				7ADA5A7226104355000A84D9 /* Squsre1.swift */,
 				7ADA5A7326104355000A84D9 /* smallButton.swift */,
 				7ADA5A7426104355000A84D9 /* LargeButton.swift */,
+				7A6CE7E92610E7EA00DB962B /* SocialLoginButton.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -238,8 +246,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7A0EE9392610416A0056BC8C /* Preview Assets.xcassets in Resources */,
+				7A31487C2610942100B6E5FB /* GoogleService-Info.plist in Resources */,
 				7A0EE9362610416A0056BC8C /* Assets.xcassets in Resources */,
-				7ADA5A932610479C000A84D9 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +317,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7A6CE7EA2610E7EA00DB962B /* SocialLoginButton.swift in Sources */,
+				7A74EECD2611A8A000B722CF /* HomePage.swift in Sources */,
 				7ADA5A8526104396000A84D9 /* Topic1.swift in Sources */,
 				7ADA5A7C26104355000A84D9 /* smallButton.swift in Sources */,
 				7ADA5A8626104396000A84D9 /* Cards.swift in Sources */,
@@ -458,9 +468,11 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = IOS_DEV/IOS_DEVDebug.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"IOS_DEV/Preview Content\"";
-				DEVELOPMENT_TEAM = TB3MC545F4;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = IOS_DEV/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
@@ -470,6 +482,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Jackson.IOS-DEV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -481,6 +494,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"IOS_DEV/Preview Content\"";
 				DEVELOPMENT_TEAM = TB3MC545F4;
@@ -493,6 +507,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "Jackson.IOS-DEV";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
