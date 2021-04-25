@@ -22,7 +22,7 @@ struct HomePage: View {
                     ZStack{
                         PlayerView(videoList: $data, reload: $reload, value: $value, pageHeigh: proxy.size.height)
                         
-                        TopBar(topbar: $topbar)
+                       TopBar(topbar: $topbar)
                     }
                 }
                 NavBar()
