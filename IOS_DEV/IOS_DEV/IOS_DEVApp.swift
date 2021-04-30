@@ -15,8 +15,6 @@ struct IOS_DEVApp: App {
         WindowGroup {
     
             HomePage()
-            
-
         }
     }
 }

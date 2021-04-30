@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct RoundedRectangle: View
+struct RoundedRect: View
 {
     var ImageName:String = ""
     var TopicName:String = ""
@@ -81,11 +81,11 @@ struct RoundedRectangle: View
     }
 }
 
-struct RoundedRectangle_Previews: PreviewProvider
+struct RoundedRect_Previews: PreviewProvider
 {
     static var previews: some View
     {
-        RoundedRectangle(ImageName: "ha", TopicName: "Name",TopicTitle: "Title",Content: "Here is content",Date: "2021-03-18")
+        RoundedRect(ImageName: "ha", TopicName: "Name",TopicTitle: "Title",Content: "Here is content",Date: "2021-03-18")
         
     }
 }

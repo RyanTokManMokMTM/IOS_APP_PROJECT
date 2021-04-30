@@ -9,26 +9,49 @@ import SwiftUI
 import Foundation
 import AVKit
 
+struct StaticButtonStyle : ButtonStyle{
+    func makeBody(configuration: Configuration) -> some View {
+        configuration.label
+    }
+}
+
 struct HomePage: View {
     @State private var topbar = 0
     @State private var data = VideoList
     @State private var reload = false
     @State private var value:Float = 0.0
+    
+
     var body: some View {
-        
         ZStack{
             VStack(spacing:0){
                 GeometryReader{ proxy in
-                    ZStack{
-                        PlayerView(videoList: $data, reload: $reload, value: $value, pageHeigh: proxy.size.height)
+                    NavigationView {
+                        NavigationLink(
+                            destination: WebImages()){
+                            ZStack(alignment:.top){
+                                Group{
+                                    PlayerView(videoList: $data, reload: $reload, value: $value, pageHeigh: proxy.size.height)
+                                }
+                                .edgesIgnoringSafeArea([.top, .bottom])
+                                .navigationBarHidden(true)
+                                .navigationTitle("Home")
+                                .navigationBarTitle("Home", displayMode: .automatic)
+                                .navigationBarBackButtonHidden(true)
+                                
+                                TopBar(topbar: $topbar)
+                                    .offset(y:-40)
+                            }
+                            
+                        }
+                        .buttonStyle(StaticButtonStyle())
                         
-                       TopBar(topbar: $topbar)
                     }
+                    
                 }
                 NavBar()
             }
             .edgesIgnoringSafeArea(.all)
-            
         }
     }
 }

@@ -24,15 +24,15 @@ struct Topic: View
             ScrollView(.vertical, showsIndicators: true)
             {
                     
-                    RoundedRectangle(ImageName:"ka",TopicName: "刻在心底",TopicTitle: "Title",Content: "Here is content",Date: "2020-09-18")
+                    RoundedRect(ImageName:"ka",TopicName: "刻在心底",TopicTitle: "Title",Content: "Here is content",Date: "2020-09-18")
                     
-                    RoundedRectangle(ImageName:"ta",TopicName: "怪胎",TopicTitle: "Title",Content: "Here is content",Date: "2020-05-12")
+                    RoundedRect(ImageName:"ta",TopicName: "怪胎",TopicTitle: "Title",Content: "Here is content",Date: "2020-05-12")
                     
-                    RoundedRectangle(ImageName:"wa",TopicName: "孤味",TopicTitle: "Title",Content: "Here is content",Date: "2020-10-22")
+                    RoundedRect(ImageName:"wa",TopicName: "孤味",TopicTitle: "Title",Content: "Here is content",Date: "2020-10-22")
                     
-                    RoundedRectangle(ImageName:"me",TopicName: "我沒有談的那場戀愛",TopicTitle: "Title",Content: "Here is content",Date: "2021-03-18")
+                    RoundedRect(ImageName:"me",TopicName: "我沒有談的那場戀愛",TopicTitle: "Title",Content: "Here is content",Date: "2021-03-18")
                 
-                RoundedRectangle(ImageName:"ka",TopicName: "刻在心底",TopicTitle: "Title",Content: "Here is content",Date: "2020-09-18")
+                RoundedRect(ImageName:"ka",TopicName: "刻在心底",TopicTitle: "Title",Content: "Here is content",Date: "2020-09-18")
                     
 
                 

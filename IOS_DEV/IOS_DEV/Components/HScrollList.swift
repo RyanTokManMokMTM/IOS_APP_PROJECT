@@ -7,47 +7,114 @@
 
 import SwiftUI
 
+//GIVEN INFO OF CURRENT MOVIE
+/*
+ 1.RANKING //No Need
+ 2.RELEASE DAY
+ 3.MOVIE TIME
+ 4.Movie Rate
+ 5.Movie Language
+ 6.Type
+ 
+ 
+ 
+ */
+
 struct HScrollList: View {
+    var info:[DetailInfo]
+    
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
-            HStack(spacing:15){
-                VStack{
-                    Text("MINS")
-                    Text("13")
+            Divider()
+                .background(Color.gray)
+            HStack(alignment:.center,spacing:15){
+                //DATE
+                VStack(spacing:10){
+                    Text("RELEASE DATE")
+                        .bold()
+                    Text("2012")
+                        .font(.subheadline)
+                        
                 }
+                .frame(minWidth:80)
+ 
+
+                Divider()
+                    .background(Color.gray)
+                
+                VStack(spacing:10){
+                    Text("TIME")
+                        .bold()
+                    Text("162MINS")
+                        .font(.subheadline)
+                }
+                .frame(minWidth:80)
+     
                 
                 Divider()
-                    .background(Color.red)
+                    .background(Color.gray)
                 
-                VStack{
-                    Text("MINS")
-                    Text("13")
+                //LANGUAGE
+                VStack(spacing:10){
+                    Text("LANGUAGE")
+                        .bold()
+                    Text("ENG")
+                        .font(.subheadline)
                 }
+                .frame(minWidth:80)
+               
                 
                 Divider()
+                    .background(Color.gray)
                 
-                VStack{
-                    Text("MINS")
-                    Text("13")
+                VStack(spacing:10){
+                    Text("RESTRICTED.LV")
+                        .bold()
+                    Text("13+")
+                        .font(.subheadline)
                 }
+                .frame(minWidth:80)
+
                 
-                Divider()
-                VStack{
-                    Text("MINS")
-                    Text("13")
-                }
+//                Divider()
+//                    .background(Color.gray)
                 
-                Divider()
-                
-            }
-            .frame(width: UIScreen.main.bounds.width, height: 50)
-        }
+//                VStack(spacing:10){
+//                    Text("TYPE")
+//                        .bold()
+//                    Text("Action 3+")
+//                        .font(.subheadline)
+//                    
+//                }
+//                .frame(minWidth:80)
     
+            
+            }
+            .frame(height: 50)
+            .foregroundColor(.gray)
+            
+        }
+        .foregroundColor(.white)
+        
+        
     }
 }
-
-struct HScrollList_Previews: PreviewProvider {
-    static var previews: some View {
-        HScrollList()
+    
+    struct HScrollList_Previews: PreviewProvider {
+        static var previews: some View {
+            ZStack{
+                Color.black.edgesIgnoringSafeArea(.all)
+                HScrollList(info: [.data,.time,.language,.rate,.type])
+            }
+            
+        }
     }
+
+
+enum DetailInfo:String {
+    case data = "RELEASE DATE"
+    case time = "TIME"
+    case language = "LANGUAGE"
+    case rate = "RESTRICTED.LV"
+    case type = "TYPE"
 }

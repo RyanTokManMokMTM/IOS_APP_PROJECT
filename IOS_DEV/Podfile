@@ -9,6 +9,7 @@ target 'IOS_DEV' do
 pod 'Firebase/Auth'
 pod 'GoogleSignIn'
 pod 'Kingfisher'
-pod 'SDWebImage'
+pod 'SDWebImageSwiftUI'
+Pod 'HCYoutubeParsert'
 
 end

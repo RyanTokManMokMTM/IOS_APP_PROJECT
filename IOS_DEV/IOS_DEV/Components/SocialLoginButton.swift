@@ -24,10 +24,10 @@ struct SocialLoginButton: View {
                     //                HStack{
                     //                    Spacer()
                     
-                        Image(image)
-                            .resizable()
-                            .frame(width: 14, height: 15)
-                            .padding(0)
+                    Image(image)
+                        .resizable()
+                        .frame(width: 14, height: 15)
+                        .padding(0)
                     
                     //                }
                     //                Spacer()
@@ -37,13 +37,13 @@ struct SocialLoginButton: View {
                         .fontWeight(.medium)
                     
                     Spacer()
-                                    
+                    
                 }
                 .padding(.leading,58)
-
                 
                 
-
+                
+                
             }
             .frame(width:screen.width-100,height: 50)
             .background(button)
