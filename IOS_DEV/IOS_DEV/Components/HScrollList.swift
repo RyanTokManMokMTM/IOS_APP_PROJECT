@@ -16,7 +16,7 @@ import SwiftUI
  5.Movie Language
  6.Type
  
- 
+ ju
  
  */
 
@@ -25,8 +25,6 @@ struct HScrollList: View {
     
     var body: some View {
         ScrollView(.horizontal, showsIndicators: false){
-            Divider()
-                .background(Color.gray)
             HStack(alignment:.center,spacing:15){
                 //DATE
                 VStack(spacing:10){
@@ -100,15 +98,15 @@ struct HScrollList: View {
     }
 }
     
-    struct HScrollList_Previews: PreviewProvider {
-        static var previews: some View {
-            ZStack{
-                Color.black.edgesIgnoringSafeArea(.all)
-                HScrollList(info: [.data,.time,.language,.rate,.type])
-            }
-            
+struct HScrollList_Previews: PreviewProvider {
+    static var previews: some View {
+        ZStack{
+            Color.black.edgesIgnoringSafeArea(.all)
+            HScrollList(info: [.data,.time,.language,.rate])
         }
+        
     }
+}
 
 
 enum DetailInfo:String {
@@ -116,5 +114,4 @@ enum DetailInfo:String {
     case time = "TIME"
     case language = "LANGUAGE"
     case rate = "RESTRICTED.LV"
-    case type = "TYPE"
 }

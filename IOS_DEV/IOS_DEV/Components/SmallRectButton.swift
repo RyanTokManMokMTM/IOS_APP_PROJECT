@@ -29,7 +29,7 @@ struct SmallRectButton: View {
             .foregroundColor(textColor)
             .frame(width:UIScreen.main.bounds.width / 3.5,height: 40)
             .background(buttonColor)
-            .cornerRadius(3)
+            .cornerRadius(5)
         }
     }
 }

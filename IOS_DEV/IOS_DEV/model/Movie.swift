@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 import AVKit
 
-struct Traier:Identifiable{
+struct Trailer:Identifiable{
     var id : Int
     var movieName:String
     var movieType:[String]
@@ -25,12 +25,19 @@ struct MovieInfo:Identifiable{
     let desscription:String
     let movieLanguage:String
     let releaseDate:Data
-    let movireTrainer:[Traier]?
+    let movireTrainer:[Trailer]?
     let moviePoster:String
 }
 
 
 
+struct MovieActor{
+    let actorName :String!
+    let actorAvatorImage : String!
+    let actorCharactorName : String!
+}
 
 
-
+struct MovieCapture{
+    let CaptureImage:String!
+}

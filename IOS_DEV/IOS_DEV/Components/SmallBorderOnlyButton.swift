@@ -30,8 +30,8 @@ struct SmallBorderOnlyButton: View {
             .foregroundColor(textColor)
             .frame(width:UIScreen.main.bounds.width / 3.5,height: 40)
             .overlay(
-                RoundedRectangle(cornerRadius: 3)
-                    .stroke(borderColor, lineWidth: 2)
+                RoundedRectangle(cornerRadius: 5)
+                    .stroke(borderColor, lineWidth: 3)
 
             )
         }
