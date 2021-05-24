@@ -19,14 +19,18 @@ struct Trailer:Identifiable{
 }
 
 struct MovieInfo:Identifiable{
-    var id = UUID().uuidString
-    let movieName:String
-    let adult:Bool
+    var id = UUID().uuidString //To identify each movie
+    let movieName:String //Current  MovieName
+    let adult:Bool //18+?
     let desscription:String
     let movieLanguage:String
-    let releaseDate:Data
+    let releaseDate:Date
     let movireTrainer:[Trailer]?
-    let moviePoster:String
+    let moviePoster:[String]?
+    let movieBackDrop:[String]?
+    let movieType:[String]
+    let movieActor:[MovieActor]
+    let movieRank:Float?
 }
 
 
@@ -37,7 +41,15 @@ struct MovieActor{
     let actorCharactorName : String!
 }
 
+struct MovieStuff{
+    let actorName :String!
+    let actorAvatorImage : String!
+    let actorCharactorName : String!
+}
+
 
 struct MovieCapture{
     let CaptureImage:String!
 }
+
+

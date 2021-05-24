@@ -1,8 +1,6 @@
 import SwiftUI
 import SDWebImageSwiftUI
 
-
-
 struct movieImage:View{
     var body : some View{
         WebImage(url:URL(string: "https://image.tmdb.org/t/p/original/thmDdDLQYrJJuhIYQIA4FDpi1E5.jpg"))

@@ -96,3 +96,7 @@ var CaptureLists = [
     MovieCapture(CaptureImage:"https://www.themoviedb.org/t/p/original/bJCb1wNJ2EMMFIsWeixRlF7XDHA.jpg"),
     MovieCapture(CaptureImage:"https://www.themoviedb.org/t/p/original/7cGsa6sqTFsrws322p0QaIe7GUX.jpg")
 ]
+//
+//var MovieList:[MovieInfo] = [
+//    MovieInfo(movieName: "Iron Mane", adult: false, desscription: "is a movie", movieLanguage: "english", releaseDate: Date(timeIntervalSince1970: .leastNormalMagnitude), movireTrainer: VideoList, moviePoster: [], movieBackDrop: [], movieType: ["Action",""], movieActor: <#T##[MovieActor]#>, movieRank: <#T##Float?#>),
+//]

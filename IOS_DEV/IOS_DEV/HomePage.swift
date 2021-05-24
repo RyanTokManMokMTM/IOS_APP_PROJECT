@@ -18,19 +18,24 @@ struct StaticButtonStyle : ButtonStyle{
 }
 
 struct HomePage:View{
+    @State private var showHomePage = false
+
+    
     var body:some View{
-        MainHomeView()
+        MainHomeView(showHomePage: $showHomePage)
+            .onAppear{
+                showHomePage = true
+            }
     }
 }
 
 
 struct HomePage_Previews: PreviewProvider {
     static var previews: some View {
-        ZStack{
-            Color.black.edgesIgnoringSafeArea(.all)
-            HomePage()
-            
-        }
+        
+        HomePage()
+        
+        
     }
 }
 
@@ -44,63 +49,55 @@ struct MainHomeView:View{
     @State private var isActive = false
     @State private var isLoading = true
     @State private var NavIndex = 0
+    @State private var isCardSelectedMovie = false
+    @Binding var showHomePage:Bool
+
     
-    init(){
-        UINavigationBar.appearance().barTintColor = UIColor(Color.init("navBarBlack").opacity(0.85))
-        UINavigationBar.appearance().tintColor = .white
-    }
+//    init(){
+//        UINavigationBar.appearance().barTintColor = UIColor(Color.init("navBarBlack").opacity(0.85))
+//        UINavigationBar.appearance().tintColor = .white
+//    }
     var body:some View{
-        VStack(spacing:0){
-            
-            switch NavIndex {
-            case 0 :
+        ZStack{
+            VStack(spacing:0){
                 GeometryReader{geo in
                     NavigationView{
-                        SubHomeView_Player(topBarIndx:$topBarIndx,trailerData:$trailerData,isReload:$isReload,value:$value,isAnimation:$isAnimation,isNavBarHidden:$isNavBarHidden,isActive:$isActive,isLoading:$isLoading, pageHeight: geo.frame(in:.global).height)
-                            .navigationViewStyle(StackNavigationViewStyle())
-                            .navigationTitle("")
-                            .navigationBarTitle("")
-                            .navigationBarHidden(true)
+                        ZStack(alignment:.topTrailing){
+                            SubHomeView_Player(topBarIndx:$topBarIndx,trailerData:$trailerData,isReload:$isReload,value:$value,isAnimation:$isAnimation,isNavBarHidden:$isNavBarHidden,isActive:$isActive,isLoading:$isLoading, pageHeight: geo.frame(in:.global).height)
+                            
+                            NavigationLink(
+                                destination: tab(isCardSelectedMovie: $isCardSelectedMovie, showHomePage: $showHomePage),
+                                isActive: $showHomePage){
+                                BackHomePageButton(){
+                                    //jump back to home page
+                                    self.showHomePage.toggle()
+                                }
+                                .padding(.horizontal,15)
+                            }
+                            
+                        }
+                        .navigationViewStyle(DoubleColumnNavigationViewStyle())
+                        .navigationTitle("")
+                        .navigationBarTitle("")
+                        .navigationBarHidden(true)
                         
                     }
                 }
-            case 1:
-                VStack{
-                    Spacer()
-                    Text("Group Page")
-                        .foregroundColor(.white)
-                }
-            case 2:
-                VStack{
-                    Spacer()
-                    Text("Search Page")
-                        .foregroundColor(.white)
-                }
-            case 3:
-                VStack{
-                    Spacer()
-                    Text("MyList Page")
-                        .foregroundColor(.white)
-                }
-            case 4:
-                VStack{
-                    Spacer()
-                    Text("Profile Page")
-                        .foregroundColor(.white)
-                }
                 
-            default:
-                VStack{
-                    Spacer()
-                    Text("Not found Page")
-                        .foregroundColor(.white)
-                }
+                
             }
-            Spacer(minLength: 0)
-            NavBar(selectedIndex: $NavIndex)
+            .edgesIgnoringSafeArea(.all)
+            .blur(radius: isCardSelectedMovie ? 20 : 0)
+            
+            if isCardSelectedMovie{
+                    MovieCoverStackRemovablePreview(movies: coverList,backHomePage: $isCardSelectedMovie)
+                        .transition(.slide)
+                
+            }
+            
             
         }
-        .edgesIgnoringSafeArea(.all)
+      //  .animation(Animation.spring())
     }
 }
 
@@ -140,9 +137,9 @@ struct SubHomeView_Player:View{
                     }
                 })
             
-            TopBar(topbar: $topBarIndx)
-             //   .offset(y:40)
-            
+//            TopBar(topbar: $topBarIndx)
+//             //   .offset(y:40)
+//
         }
     }
 }
@@ -239,15 +236,14 @@ struct MovieIntrol: View {
             HStack(alignment:.bottom){
                 VStack(alignment:.leading,spacing:10){
                     HStack{
-                        
-                        
                         Text(trailer.movieName)
                             .bold()
-                            .font(.largeTitle)
+                            .font(.title)
                         
                     }
                     
                     Text("TailerName")
+                        .font(.body)
 
                     Text("Release Date:12/04/2020")
                     
@@ -270,18 +266,35 @@ struct MovieIntrol: View {
                 .navigationBarTitle("")
                 .navigationBarHidden(true)
                 .buttonStyle(StaticButtonStyle())
-
-            
-                
-                
-                
             }
             .padding(.horizontal,10)
-            
-            
         }
         .foregroundColor(.white)
         .padding(.vertical,15)
+        .padding(.bottom,5)
+    }
+}
+
+struct BackHomePageButton:View{
+    var action:()->()
+    var body: some View{
+        Button(action:action, label: {
+            ZStack{
+                Circle()
+                    .foregroundColor(Color.init("ThemeSubColor").opacity(0.8))
+                    .frame(width: 30, height: 30)
+                
+                Image(systemName: "xmark.circle.fill")
+                    .resizable()
+                    .renderingMode(.original)
+                    .aspectRatio(contentMode: .fit)
+                    .frame(width: 25, height: 25)
+                    .opacity(0.85)
+            }
+        })
+
+        
+        
     }
 }
 
@@ -391,3 +404,13 @@ struct MovieIntrol: View {
 //
 //}
 
+extension UINavigationController: UIGestureRecognizerDelegate {
+    override open func viewDidLoad() {
+        super.viewDidLoad()
+        interactivePopGestureRecognizer?.delegate = self
+    }
+
+    public func gestureRecognizerShouldBegin(_ gestureRecognizer: UIGestureRecognizer) -> Bool {
+        return viewControllers.count > 1
+    }
+}
